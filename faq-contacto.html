@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preguntas frecuentes sobre café y formulario de contacto." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4e9dd" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0907" />
+  <meta id="meta-theme-color" name="theme-color" content="#f4e9dd" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <title>Ritual Café — FAQ y Contacto</title>
+  <style>
+    p{
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <button id="theme-toggle" class="btn secondary theme-btn" aria-label="Tema: sistema" aria-live="polite" title="Tema: sistema">
+    <span class="theme-icon" aria-hidden="true">🖥️</span>
+    <span class="theme-label">Sistema</span>
+  </button>
+  <button id="to-top" class="btn to-top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">
+    <span aria-hidden="true">↑</span>
+    <span class="sr-only">Volver arriba</span>
+  </button>
+
+  <header>
+    <div class="container navbar" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="Ícono grano de café" />
+        <span>Ritual Café</span>
+      </div>
+      <button id="menu-btn" class="btn secondary" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="granos-molienda.html">Tipos de Grano / Molienda</a></li>
+          <li><a href="infusion.html">Tiempos de Infusión</a></li>
+          <li><a href="cafeteras-metodos.html">Cafeteras / Métodos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html" aria-current="page" class="active">FAQ / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <figure class="hero-media">
+      <img
+        src="assets/hero/hero-cafe-1100.jpg"
+        alt="Taza de café con granos alrededor"
+        width="1100"
+        height="620"
+        loading="eager"
+        decoding="async"
+      />
+    </figure>
+
+    <section id="faq" aria-labelledby="t-faq">
+      <h1 id="t-faq" class="section-title">Preguntas frecuentes</h1>
+
+      <details><summary>¿Cuál es la diferencia entre arábica y robusta?</summary><p>Arábica: más dulce y complejo, menos cafeína. Robusta: más intenso y amargo, más cafeína y crema en espresso.</p></details>
+      <details><summary>¿Cómo influye el tueste en el sabor?</summary><p>Claro = más acidez y notas frutales; medio = equilibrio; oscuro = más amargor/ahumado y cuerpo alto.</p></details>
+      <details><summary>¿Qué molienda usar para cada método?</summary><p>Gruesa: prensa/cold brew. Media: V60/Chemex. Fina: espresso. Ultrafina: turco.</p></details>
+      <details><summary>¿Cuál es un buen ratio agua/café inicial?</summary><p>Filtro 1:15–1:17; prensa 1:15; espresso ~1:2 (18 g → 36 g). Ajustá a gusto.</p></details>
+      <details><summary>¿A qué temperatura caliento el agua?</summary><p>Generalmente 90–96 °C. Tueste claro tolera más temperatura; oscuro, un poco menos.</p></details>
+      <details><summary>¿Qué es el “bloom” y para qué sirve?</summary><p>Preinfusión de 30–45 s que libera CO₂ en filtro y mejora la extracción.</p></details>
+      <details><summary>¿Cómo sé si mi café está fresco?</summary><p>Fecha de tueste reciente (≤ 4–6 semanas), aroma vivo y bolsa con válvula.</p></details>
+      <details><summary>¿Cómo guardar el café en casa?</summary><p>En grano, frasco hermético opaco, lugar fresco y seco. Evitá luz, calor y humedad.</p></details>
+      <details><summary>¿Conviene moler justo antes de preparar?</summary><p>Sí: conserva aromas y reduce oxidación. La molienda previa envejece rápido.</p></details>
+      <details><summary>Mi café sale amargo, ¿qué ajusto?</summary><p>Probá molienda más gruesa, menos tiempo o agua un poco más fría. Revisá dosis.</p></details>
+      <details><summary>Mi café sale ácido o débil, ¿qué hago?</summary><p>Molienda más fina, un poco más de tiempo o mayor proporción de café.</p></details>
+      <details><summary>¿Qué calidad de agua usar?</summary><p>Agua limpia, sin olores, TDS moderado/dureza baja. El agua es ~98% de la taza.</p></details>
+      <details><summary>¿Diferencia entre moka y espresso?</summary><p>Moka: presión baja de vapor, bebida intensa. Espresso: ~9 bar, extracción rápida con crema.</p></details>
+      <details><summary>¿Cómo calibro el espresso en casa?</summary><p>Mantené dosis y compactado; ajustá molienda para lograr 1:2 en 25–30 s (aprox.).</p></details>
+      <details><summary>¿La leche cambia el sabor?</summary><p>Sí: el dulzor y la textura equilibran acidez y amargor; la microespuma modifica el cuerpo.</p></details>
+      <details><summary>¿Qué es la canalización (channeling)?</summary><p>El agua se escapa por vías en el puck y subextrae. Solución: distribuir parejo y compactar nivelado.</p></details>
+      <details><summary>¿Conviene agitar o remover en filtro?</summary><p>Suave, sí: homogeneiza. Evitá turbulencia excesiva que aporte amargor.</p></details>
+      <details><summary>¿Qué cafeteras son más fáciles para empezar?</summary><p>Prensa francesa y V60 por control y simpleza; moka requiere cuidado con el calor.</p></details>
+      <details><summary>¿Qué molinillo compro primero?</summary><p>De muelas (mejor que cuchillas). Manuales de buena relación precio/calidad son gran inicio.</p></details>
+      <details><summary>¿El descafeinado tiene sabor?</summary><p>Sí. Un buen proceso (Swiss Water/CO₂) conserva gran parte del perfil del grano.</p></details>
+      <details><summary>¿Cuánta cafeína tiene una taza?</summary><p>Depende del método: filtro 80–140 mg, espresso 50–80 mg por shot aprox.</p></details>
+      <details><summary>¿El cold brew es menos ácido?</summary><p>Suele sentirse más dulce y suave por extracción en frío; podés concentrarlo y diluir.</p></details>
+      <details><summary>¿Cómo limpio mi equipo?</summary><p>Enjuague diario, limpieza semanal profunda y descalcificación según uso/agua.</p></details>
+      <details><summary>¿Cómo interpreto las notas de cata?</summary><p>Son descriptores orientativos (fruta, chocolate, floral); no son sabores añadidos.</p></details>
+      <details><summary>¿Cómo mejorar sin comprar equipo caro?</summary><p>Frescura, molienda consistente, buen agua, ratios claros y técnica repetible. Cambiá una variable por vez.</p></details>
+    </section>
+
+    <section id="contacto" aria-labelledby="t-contacto">
+      <h2 id="t-contacto" class="section-title">Contacto</h2>
+
+      <div id="contacto-slot">
+        <form
+          id="contacto-form"
+          class="card"
+          aria-describedby="ayuda-contacto"
+          action="mailto:contacto@tu-dominio.com"
+          method="POST"
+          enctype="text/plain"
+          target="_blank"
+        >
+          <p id="ayuda-contacto" class="muted">Dejanos tu consulta. Los campos marcados con * son obligatorios.</p>
+
+          <div class="grid">
+            <div class="col-6">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="col-6">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="col-12">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn" type="submit" id="enviar-btn">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <template id="tpl-exito">
+        <div class="card" id="exito" role="status" aria-live="polite" tabindex="-1">
+          <p>✅ ¡Gracias! Intentamos abrir tu cliente de correo en una nueva pestaña/ventana con tu mensaje.</p>
+          <p class="muted">Si no se abrió, revisá el bloqueo de ventanas emergentes o configurá un cliente de email.</p>
+          <div class="actions">
+            <button class="btn" id="reenviar-btn" type="button">Enviar de nuevo</button>
+          </div>
+        </div>
+      </template>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Café • Guía</h4>
+        <p class="muted">Contenido realizado para asignatura Introducción a la Programación Web. © 2025</p>
+      </div>
+
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ y Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Créditos</h4>
+        <p class="muted">Imágenes ilustrativas. Los derechos se los reservan los autores de las mismas. Icono en SVG.</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <nav class="socials" aria-label="Redes sociales">
+          <a class="social-btn" href="https://www.instagram.com/modobarista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@modobaristaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.4 32.4 0 0 0 0 12a32.4 32.4 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.4 32.4 0 0 0 24 12a32.4 32.4 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slot = document.getElementById('contacto-slot');
+      const tplExito = document.getElementById('tpl-exito');
+      const MAIL = 'contacto@tu-dominio.com';
+
+      const originalFormHTML = slot.innerHTML;
+
+      function attachFormHandler() {
+        const form = document.getElementById('contacto-form');
+        if (!form) return;
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const data = new FormData(form);
+          const nombre = (data.get('nombre') || '').toString().trim();
+          const email  = (data.get('email')  || '').toString().trim();
+          const mensaje= (data.get('mensaje')|| '').toString().trim();
+
+          const subject = `Consulta web — ${nombre || 'Sin nombre'}`;
+          const body =
+`Nombre: ${nombre}
+Email: ${email}
+
+Mensaje:
+${mensaje}`;
+
+          const mailto = `mailto:${encodeURIComponent(MAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          const win = window.open(mailto, '_blank', 'noopener,noreferrer');
+          if (!win) window.location.href = mailto;
+
+          form.reset();
+
+          slot.innerHTML = '';
+          const exitoNode = tplExito.content.cloneNode(true);
+          slot.appendChild(exitoNode);
+
+          const exitoEl = document.getElementById('exito');
+          if (exitoEl) setTimeout(() => exitoEl.focus(), 0);
+
+          const reBtn = document.getElementById('reenviar-btn');
+          reBtn?.addEventListener('click', () => {
+            slot.innerHTML = originalFormHTML;
+            attachFormHandler();
+            const nombreInput = document.getElementById('nombre');
+            nombreInput?.focus();
+          });
+        });
+      }
+
+      attachFormHandler();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quiénes somos — Guía educativa independiente sobre café." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4e9dd" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0907" />
+  <meta id="meta-theme-color" name="theme-color" content="#f4e9dd" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <title>Ritual Café — Quiénes somos</title>
+
+  <style>
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+    :root {
+      --map-max-w: 1100px;
+      --map-h: clamp(320px, 60vh, 700px);
+    }
+    .map-wrap {
+      width: 100%;
+      max-width: var(--map-max-w);
+      margin: 2rem auto 0;
+      height: var(--map-h);
+      position: relative;
+    }
+    .map-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .map-links {
+      max-width: var(--map-max-w);
+      margin: .75rem auto 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .map-links a { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <button id="theme-toggle" class="btn secondary theme-btn" aria-label="Tema: sistema" aria-live="polite" title="Tema: sistema">
+    <span class="theme-icon" aria-hidden="true">🖥️</span>
+    <span class="theme-label">Sistema</span>
+  </button>
+
+  <button id="to-top" class="btn to-top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">
+    <span aria-hidden="true">↑</span>
+    <span class="sr-only">Volver arriba</span>
+  </button>
+
+  <header>
+    <div class="container navbar" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="Ícono grano de café" />
+        <span>Ritual Café</span>
+      </div>
+      <button id="menu-btn" class="btn secondary" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes.html" aria-current="page" class="active">Quiénes somos</a></li>
+          <li><a href="granos-molienda.html">Tipos de Grano / Molienda</a></li>
+          <li><a href="infusion.html">Tiempos de Infusión</a></li>
+          <li><a href="cafeteras-metodos.html">Cafeteras / Métodos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <section id="quienes" aria-labelledby="t-quienes">
+      <figure class="hero-media">
+        <img
+          src="assets/hero/hero-cafe-1100.jpg"
+          alt="Taza de café con granos alrededor"
+          width="1100"
+          height="620"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+      <h1 id="t-quienes" class="section-title">Quiénes somos</h1>
+      <div class="grid">
+        <article class="card col-8">
+          <p>Somos una guía educativa independiente pensada para estudiantes: explicamos el mundo del café con rigor y lenguaje simple, sin marcas, sponsors ni intereses comerciales. Cubrimos desde conceptos básicos (orígenes, tuestes, frescura y molienda) hasta técnicas y ciencia de la extracción (ratios, temperatura, tiempos y calibración). Incluimos comparativas de métodos (V60, prensa, moka, espresso), ejercicios prácticos, glosarios, fichas descargables y soluciones a problemas comunes, para que puedas aprender paso a paso, formar criterio propio y tomar decisiones informadas en cada preparación.</p>
+        </article>
+        <aside class="card col-4">
+          <h3>Qué vas a encontrar</h3>
+          <ul>
+            <li>Comparativas de métodos</li>
+            <li>Guías de molienda</li>
+            <li>Tablas de referencia</li>
+            <li>Consejos prácticos</li>
+            <li>Calidad del agua y temperaturas</li>
+            <li>Ratios agua/café por método</li>
+            <li>Solución de problemas comunes</li>
+            <li>Limpieza, mantenimiento y almacenamiento</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="mapa" aria-labelledby="t-mapa">
+      <h2 id="t-mapa" class="section-title">Dónde estamos</h2>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9515215636534!2d-58.42831522223621!3d-34.605387357589755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb547c063fcb5%3A0x50c7eb973f831e3b!2sModo%20Barista!5e0!3m2!1ses-419!2sar!4v1762542871464!5m2!1ses-419!2sar"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          aria-label="Mapa de Modo Barista en Google Maps">
+        </iframe>
+      </div>
+      <div class="map-links">
+        <a href="https://www.google.com/maps/place/Modo+Barista/@-34.605387,-58.428315,15z" target="_blank" rel="noopener">Ver en Google Maps</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Modo+Barista" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Café • Guía</h4>
+        <p class="muted">Contenido realizado para asignatura Introducción a la Programación Web. © 2025</p>
+      </div>
+
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ y Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Créditos</h4>
+        <p class="muted">Imágenes ilustrativas. Los derechos se los reservan los autores de las mismas. Icono en SVG.</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <nav class="socials" aria-label="Redes sociales">
+          <a class="social-btn" href="https://www.instagram.com/modobarista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@modobaristaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.4 32.4 0 0 0 0 12a32.4 32.4 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.4 32.4 0 0 0 24 12a32.4 32.4 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tiempos de infusión para cada método de café." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4e9dd" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0907" />
+  <meta id="meta-theme-color" name="theme-color" content="#f4e9dd" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <title>Ritual Café — Tiempos de Infusión</title>
+</head>
+
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <button id="theme-toggle" class="btn secondary theme-btn" aria-label="Tema: sistema" aria-live="polite" title="Tema: sistema">
+    <span class="theme-icon" aria-hidden="true">🖥️</span>
+    <span class="theme-label">Sistema</span>
+  </button>
+
+  <button id="to-top" class="btn to-top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">
+    <span aria-hidden="true">↑</span>
+    <span class="sr-only">Volver arriba</span>
+  </button>
+
+  <header>
+    <div class="container navbar" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="Ícono grano de café" />
+        <span>Ritual Café</span>
+      </div>
+      <button id="menu-btn" class="btn secondary" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="granos-molienda.html">Tipos de Grano / Molienda</a></li>
+          <li><a href="infusion.html" aria-current="page" class="active">Tiempos de Infusión</a></li>
+          <li><a href="cafeteras-metodos.html">Cafeteras / Métodos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <section id="infusion" aria-labelledby="t-infusion">
+      <h2 id="t-infusion" class="section-title">Tiempos de infusión (referencias)</h2>
+      <div class="card">
+        <table>
+          <caption>Guía orientativa según método y molienda.</caption>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Relación café:agua</th>
+              <th>Molienda</th>
+              <th>Tiempo</th>
+              <th>Temperatura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Prensa francesa</td><td>1:15</td><td>Gruesa</td><td>4–5 min</td><td>92–96 °C</td></tr>
+            <tr><td>V60</td><td>1:16</td><td>Media</td><td>2:30–3:30</td><td>90–94 °C</td></tr>
+            <tr><td>Chemex</td><td>1:17</td><td>Media-gruesa</td><td>3:30–4:30</td><td>90–94 °C</td></tr>
+            <tr><td>Moka</td><td>1:10</td><td>Fina</td><td>Hasta hervir</td><td>Calor bajo/medio</td></tr>
+            <tr><td>Espresso</td><td>1:2</td><td>Muy fina</td><td>25–30 s</td><td>~93 °C</td></tr>
+            <tr><td>Cold brew</td><td>1:8</td><td>Gruesa</td><td>12–18 h</td><td>Frío</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="5">Ajustá a gusto: si está amargo, molé más grueso o bajá el tiempo; si está ácido, molé más fino o subí la temperatura.</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section id="calc" aria-labelledby="t-calc">
+      <h1 id="t-calc" class="section-title">Calculadora de proporciones</h1>
+      <div class="card">
+        <form id="calc-form" class="grid" novalidate>
+          <div class="col-12 col-6@md">
+            <label for="metodo">Método</label>
+            <select id="metodo" name="metodo">
+              <option value="prensa">Prensa francesa (1:15)</option>
+              <option value="v60">V60 (1:16)</option>
+              <option value="chemex">Chemex (1:17)</option>
+              <option value="moka">Moka (1:10)</option>
+              <option value="espresso">Espresso (1:2)</option>
+              <option value="coldbrew">Cold brew (1:8)</option>
+            </select>
+            <p id="ratio-actual" class="muted" aria-live="polite">Relación café:agua 1:15</p>
+          </div>
+
+          <fieldset class="col-12 col-6@md">
+            <legend class="sr-only">Elegí cómo calcular</legend>
+            <div class="grid">
+              <label class="col-6">
+                <input type="radio" name="modo" value="desde-cafe" checked />
+                Calcular a partir de café (g)
+              </label>
+              <label class="col-6">
+                <input type="radio" name="modo" value="desde-agua" />
+                Calcular a partir de agua (g)
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="col-6">
+            <label for="cafe">Café (g)</label>
+            <input type="number" id="cafe" name="cafe" inputmode="decimal" min="0" step="0.1" placeholder="p.ej. 18" />
+          </div>
+          <div class="col-6">
+            <label for="agua">Agua (g)</label>
+            <input type="number" id="agua" name="agua" inputmode="decimal" min="0" step="1" placeholder="p.ej. 270" />
+          </div>
+
+          <div class="col-12">
+            <button class="btn" type="submit">Calcular</button>
+            <button class="btn secondary" type="reset" id="btn-reset">Limpiar</button>
+          </div>
+
+          <div class="col-12">
+            <output id="resultado" role="status" aria-live="polite" class="muted"></output>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="historial" aria-labelledby="t-historial">
+      <h2 id="t-historial" class="section-title">Historial de cálculos</h2>
+      <div class="card">
+        <div class="grid" style="align-items:center; gap:.5rem">
+          <div class="col-12 col-4@md" style="display:flex; gap:.5rem; justify-content:flex-end; flex-wrap:wrap">
+            <button class="btn secondary" type="button" id="btn-exportar">Exportar CSV</button>
+            <button class="btn secondary" type="button" id="btn-limpiar">Limpiar historial</button>
+          </div>
+        </div>
+
+        <div style="margin-top: .75rem; overflow:auto">
+          <table aria-describedby="ayuda-historial">
+            <thead>
+              <tr>
+                <th>Fecha y hora</th>
+                <th>Método</th>
+                <th>Relación</th>
+                <th>Modo</th>
+                <th>Café (g)</th>
+                <th>Agua (g)</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="historial-body"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="7">Tip: podés exportar a CSV o borrar entradas individuales.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Café • Guía</h4>
+        <p class="muted">Contenido realizado para asignatura Introducción a la Programación Web. © 2025</p>
+      </div>
+
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ y Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Créditos</h4>
+        <p class="muted">Imágenes ilustrativas. Los derechos se los reservan los autores de las mismas. Icono en SVG.</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <nav class="socials" aria-label="Redes sociales">
+          <a class="social-btn" href="https://www.instagram.com/modobarista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@modobaristaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.4 32.4 0 0 0 0 12a32.4 32.4 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.4 32.4 0 0 0 24 12a32.4 32.4 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const RATIOS = { prensa: 15, v60: 16, chemex: 17, moka: 10, espresso: 2, coldbrew: 8 };
+
+      const metodoEl = document.getElementById('metodo');
+      const ratioTexto = document.getElementById('ratio-actual');
+      const form = document.getElementById('calc-form');
+      const cafeEl = document.getElementById('cafe');
+      const aguaEl = document.getElementById('agua');
+      const resultadoEl = document.getElementById('resultado');
+      const resetEl = document.getElementById('btn-reset');
+
+      const STORAGE_KEY = 'historial-calculos-cafe';
+      const tbody = document.getElementById('historial-body');
+      const btnLimpiar = document.getElementById('btn-limpiar');
+      const btnExportar = document.getElementById('btn-exportar');
+
+      function actualizarRatioTexto() {
+        const r = RATIOS[metodoEl.value];
+        ratioTexto.textContent = `Relación café:agua 1:${r}`;
+      }
+
+      function redondear(n, dec = 1) {
+        const f = Math.pow(10, dec);
+        return Math.round((n + Number.EPSILON) * f) / f;
+      }
+
+      function leerHistorial() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        } catch (_) {
+          return [];
+        }
+      }
+
+      function guardarHistorial(arr) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+      }
+
+      function agregarAlHistorial(item) {
+        const arr = leerHistorial();
+        arr.unshift(item);
+        guardarHistorial(arr);
+        renderHistorial();
+      }
+
+      function borrarFila(idx) {
+        const arr = leerHistorial();
+        arr.splice(idx, 1);
+        guardarHistorial(arr);
+        renderHistorial();
+      }
+
+      function limpiarHistorial() {
+        localStorage.removeItem(STORAGE_KEY);
+        renderHistorial();
+      }
+
+      function aCSV(arr) {
+        const encabezados = ['Fecha y hora','Método','Relación','Modo','Café (g)','Agua (g)'];
+        const filas = arr.map(x => [
+          x.fecha, x.metodo, `1:${x.ratio}`, x.modo, String(x.cafe).replace('.', ','), String(x.agua).replace('.', ',')
+        ]);
+        const csv = [encabezados, ...filas].map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+        return csv;
+      }
+
+      function descargarCSV() {
+        const arr = leerHistorial();
+        if (!arr.length) return;
+        const blob = new Blob([aCSV(arr)], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'historial-calculos-cafe.csv';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function renderHistorial() {
+        const arr = leerHistorial();
+        tbody.innerHTML = '';
+        if (!arr.length) {
+          const tr = document.createElement('tr');
+          const td = document.createElement('td');
+          td.colSpan = 7;
+          td.className = 'muted';
+          td.textContent = 'Todavía no hay cálculos guardados.';
+          tr.appendChild(td);
+          tbody.appendChild(tr);
+          return;
+        }
+
+        arr.forEach((x, idx) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${x.fecha}</td>
+            <td>${x.metodo}</td>
+            <td>1:${x.ratio}</td>
+            <td>${x.modo === 'desde-cafe' ? 'Desde café' : 'Desde agua'}</td>
+            <td>${x.cafe}</td>
+            <td>${x.agua}</td>
+            <td>
+              <button class="btn secondary" type="button" data-del="${idx}" aria-label="Borrar fila">Borrar</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        tbody.querySelectorAll('button[data-del]').forEach(btn => {
+          btn.addEventListener('click', () => borrarFila(parseInt(btn.getAttribute('data-del'), 10)));
+        });
+      }
+
+      function calcular() {
+        const metodo = metodoEl.value;
+        const ratio = RATIOS[metodo];
+        const modo = form.querySelector('input[name="modo"]:checked')?.value;
+        const cafe = parseFloat((cafeEl.value || '').toString().replace(',', '.'));
+        const agua = parseFloat((aguaEl.value || '').toString().replace(',', '.'));
+        resultadoEl.textContent = '';
+
+        let cafeCalc = cafe;
+        let aguaCalc = agua;
+
+        if (modo === 'desde-cafe') {
+          if (!isFinite(cafe) || cafe <= 0) {
+            resultadoEl.textContent = 'Ingresá una cantidad válida de café (g).';
+            return;
+          }
+          aguaCalc = redondear(cafe * ratio, 0);
+          aguaEl.value = aguaCalc;
+          resultadoEl.textContent = `Con ${cafe} g de café y una relación 1:${ratio}, usá ${aguaCalc} g de agua.`;
+        } else {
+          if (!isFinite(agua) || agua <= 0) {
+            resultadoEl.textContent = 'Ingresá una cantidad válida de agua (g).';
+            return;
+          }
+          cafeCalc = redondear(agua / ratio, 1);
+          cafeEl.value = cafeCalc;
+          resultadoEl.textContent = `Para ${agua} g de agua y una relación 1:${ratio}, usá ${cafeCalc} g de café.`;
+        }
+
+        const metodoTexto = metodoEl.options[metodoEl.selectedIndex]?.text || metodo;
+        const fecha = new Date().toLocaleString('es-AR');
+        agregarAlHistorial({ fecha, metodo: metodoTexto, ratio, modo, cafe: cafeCalc, agua: aguaCalc });
+      }
+
+      metodoEl.addEventListener('change', actualizarRatioTexto);
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        calcular();
+      });
+      resetEl.addEventListener('click', () => {
+        resultadoEl.textContent = '';
+        actualizarRatioTexto();
+      });
+      btnLimpiar.addEventListener('click', limpiarHistorial);
+      btnExportar.addEventListener('click', descargarCSV);
+
+      actualizarRatioTexto();
+      renderHistorial();
+    });
+  </script>
+</body>
+</html>

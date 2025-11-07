@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tipos de grano de café y guía de molienda." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4e9dd" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0907" />
+  <meta id="meta-theme-color" name="theme-color" content="#f4e9dd" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <title>Ritual Café — Granos y Molienda</title>
+  <style>
+    p{
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <button id="theme-toggle" class="btn secondary theme-btn" aria-label="Tema: sistema" aria-live="polite" title="Tema: sistema">
+    <span class="theme-icon" aria-hidden="true">🖥️</span>
+    <span class="theme-label">Sistema</span>
+  </button>
+
+  <button id="to-top" class="btn to-top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">
+    <span aria-hidden="true">↑</span>
+    <span class="sr-only">Volver arriba</span>
+  </button>
+
+  <header>
+    <div class="container navbar" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="Ícono grano de café" />
+        <span>Ritual Café</span>
+      </div>
+      <button id="menu-btn" class="btn secondary" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="granos-molienda.html" aria-current="page" class="active">Tipos de Grano / Molienda</a></li>
+          <li><a href="infusion.html">Tiempos de Infusión</a></li>
+          <li><a href="cafeteras-metodos.html">Cafeteras / Métodos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <section id="granos" aria-labelledby="t-granos">
+      <h2 id="t-granos" class="section-title">Tipos de granos</h2>
+      <div class="grid">
+        <article class="card col-6">
+          <h3>Arábica</h3>
+          <p>Dulce y complejo, con acidez brillante y notas florales o frutales; cuerpo medio y aroma elegante. Contiene menos cafeína que la robusta, lo que realza su fineza. Suele cultivarse en altura media-alta y es la base de la mayoría de cafés de especialidad.</p>
+          <img src="assets/images/beansarabica.jpg" alt="Granos de café arábica" />
+        </article>
+        <article class="card col-6">
+          <h3>Robusta</h3>
+          <p>Sabor intenso y más amargo, con matices terrosos o a cacao; cuerpo alto y crema abundante en espresso. Aroma menos complejo pero muy contundente. Alta en cafeína, resistente y productiva, es común en blends y en café soluble.</p>
+          <img src="assets/images/beansrobusta.jpg" alt="Granos de café robusta" />
+        </article>
+        <article class="card col-6">
+          <h3>Liberica</h3>
+          <p>Perfil singular con rasgos ahumados y amaderados, acompañados de toques frutales exóticos; cuerpo medio-alto y aroma penetrante. Cafeína similar o algo menor que la robusta. Grano grande y oblongo, producción limitada en África y el Sudeste Asiático.</p>
+          <img src="assets/images/beansliberica.jpg" alt="Granos de café libérica" />
+        </article>
+        <article class="card col-6">
+          <h3>Excelsa</h3>
+          <p>Sabor vivo, ácido-frutal con guiños a vino o berries; cuerpo medio y aroma vibrante. Cafeína media y rendimiento moderado. Se usa a menudo en mezclas para aportar brillo y complejidad. (hoy considerada parte de la libérica)</p>
+          <img src="assets/images/beansexcelsa.jpg" alt="Granos de café excelsa" />
+        </article>
+      </div>
+    </section>
+
+    <section id="tueste" aria-labelledby="t-tueste">
+      <h2 id="t-tueste" class="section-title">Tipo de tueste</h2>
+      <div class="grid">
+        <article class="card col-4">
+          <h3>Claro</h3>
+          <p>Color canela, sin aceites visibles. Conserva al máximo los rasgos del origen: acidez más marcada, dulzor delicado y notas florales/frutales. Cuerpo ligero a medio y final limpio; ideal para métodos de filtro (V60, Chemex, Aeropress) y para calibrar matices.</p>
+        </article>
+        <article class="card col-4">
+          <h3>Medio</h3>
+          <p>Ámbar a marrón, ligera caramelización, casi sin brillo aceitoso. Equilibra acidez y dulzor con mayor cuerpo y notas a caramelo, chocolate y frutos secos. Versátil: funciona bien en filtro, prensa y moka; también como espresso más amable y dulce.</p>
+        </article>
+        <article class="card col-4">
+          <h3>Oscuro</h3>
+          <p>Marrón intenso a casi negro, superficie oleosa. Predominan sabores tostados/ahumados, cacao amargo y baja acidez; cuerpo alto y final prolongado. Menos énfasis en el origen y más en el carácter del tueste; común en espresso potente y bebidas con leche.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="molienda" aria-labelledby="t-molienda">
+      <h2 id="t-molienda" class="section-title">Tipo de molienda</h2>
+      <div class="grid">
+        <article class="card col-4">
+          <h3>Gruesa</h3>
+          <p>Partículas grandes, textura similar a sal gruesa. Favorece extracciones largas y por inmersión, como prensa francesa y cold brew, manteniendo claridad y evitando amargor. Ideal cuando querés cuerpo redondo con baja a moderada acidez.</p>
+        </article>
+        <article class="card col-4">
+          <h3>Media</h3>
+          <p>Granulometría tipo arena fina. Define bien el balance entre acidez y dulzor en métodos de filtro como V60, Chemex y algunas recetas de Aeropress. Versátil para ajustar tiempos: si la taza queda plana, afiná un poco; si amarga, engrosá.</p>
+        </article>
+        <article class="card col-4">
+          <h3>Fina</h3>
+          <p>Polvo muy fino, cercano a harina. Necesaria para espresso (alta presión y tiempos cortos) y, según la cafetera, para ibrik/turco. Aumenta la resistencia al flujo, concentra el sabor y la crema; si la extracción resulta amarga o muy lenta, aflojá apenas.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Café • Guía</h4>
+        <p class="muted">Contenido realizado para asignatura Introducción a la Programación Web. © 2025</p>
+      </div>
+
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ y Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Créditos</h4>
+        <p class="muted">Imágenes ilustrativas. Los derechos se los reservan los autores de las mismas. Icono en SVG.</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <nav class="socials" aria-label="Redes sociales">
+          <a class="social-btn" href="https://www.instagram.com/modobarista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@modobaristaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.4 32.4 0 0 0 0 12a32.4 32.4 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.4 32.4 0 0 0 24 12a32.4 32.4 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

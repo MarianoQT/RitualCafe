@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Mariano Q" />
+  <meta name="description" content="Guía completa de café: granos, molienda, cafeteras, métodos y tiempos de infusión." />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="content-language" content="es-AR" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4e9dd" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0907" />
+  <meta id="meta-theme-color" name="theme-color" content="#f4e9dd" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <title>Ritual Café — Guía completa</title>
+
+  <style>
+    p{
+      text-align:justify;
+      text-justify:inter-word;
+      hyphens:auto;
+      -webkit-hyphens:auto;
+      -ms-hyphens:auto;
+    }
+    .hero{ padding-block:var(--space-8, 3rem); }
+    .hero-media{
+      width:min(100%, 1100px);
+      aspect-ratio:16/4.5;
+      margin-inline:auto;
+      overflow:hidden;
+      border-radius:var(--radius-2xl, 16px);
+      box-shadow:0 8px 28px rgba(0,0,0,.15);
+    }
+    .hero-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+    .video-wrap{ width:100%; max-width:100%; }
+    .video-wrap iframe{
+      width:100%;
+      height:auto;
+      aspect-ratio:16/9;
+      display:block;
+      border:0;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+  <button id="to-top" class="btn to-top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">
+    <span aria-hidden="true">↑</span>
+    <span class="sr-only">Volver arriba</span>
+  </button>
+
+  <button id="theme-toggle" class="btn secondary theme-btn" aria-label="Tema: sistema" aria-live="polite" title="Tema: sistema">
+    <span class="theme-icon" aria-hidden="true">🖥️</span>
+    <span class="theme-label">Sistema</span>
+  </button>
+
+  <header>
+    <div class="container navbar" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="Ícono grano de café" />
+        <span>Ritual Café</span>
+      </div>
+      <button id="menu-btn" class="btn secondary" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="granos-molienda.html">Tipos de Grano / Molienda</a></li>
+          <li><a href="infusion.html">Tiempos de Infusión</a></li>
+          <li><a href="cafeteras-metodos.html">Cafeteras / Métodos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <figure class="hero-media">
+        <img
+          src="assets/hero/hero-cafe-1100.jpg"
+          alt="Taza de café con granos alrededor"
+          width="1100"
+          height="620"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+
+      <div>
+        <h1 id="titulo-inicio">Ritual Café</h1>
+        <p>Una guía práctica y clara para que cada taza salga excelente: desde elegir el grano adecuado (origen, tueste y frescura) hasta ajustar la molienda según el método. Te acompaña a comparar cafeteras y técnicas (V60, prensa francesa, moka y espresso) con proporciones agua/café, temperaturas y tiempos precisos. Incluye consejos de vertido, calibración del molido, calidad del agua y limpieza del equipo, además de soluciones a problemas comunes (amargor, acidez excesiva, falta de cuerpo o canalización) para que puedas afinar cada variable y obtener un sabor equilibrado y consistente.</p>
+        <br>
+        <div class="cta">
+          <a class="btn" href="infusion.html">Ir a la calculadora de proporciones</a>
+          <a class="btn secondary" href="recetas.html">Ir a las recetas mas populares</a>
+        </div>
+      </div>
+    </section>
+
+<div class="video-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/4MmIogL_xGw?autoplay=1&mute=1&loop=1"
+    title="Coffe Experience"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="origin-when-cross-origin"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+</div>
+<p class="muted">
+  Si el video no se reproduce, abrilo en
+  <a href="https://www.youtube.com/embed/4MmIogL_xGw" target="_blank" rel="noopener">YouTube</a>.
+</p>
+
+
+    <section aria-labelledby="t-que-es">
+      <div class="grid">
+        <article class="card col-12">
+          <h2 id="t-que-es" class="section-title">¿Qué vas a encontrar?</h2>
+          <p>Contenido educativo, claro y directo para aprender sin vueltas: comparativas entre métodos (V60, prensa, moka y espresso) con pros, contras y cuándo usar cada uno; guías de molienda con equivalencias visuales y ajustes finos según sabor; tablas de referencia con ratios agua/café, temperaturas y tiempos para diferentes volúmenes; y consejos prácticos sobre calidad del agua, frescura del grano, almacenamiento, calibración del molinillo y limpieza del equipo. Además, incluye soluciones rápidas a problemas comunes (amargor, acidez marcada, falta de dulzor o cuerpo) y recomendaciones de herramientas accesibles para mejorar tu café en casa paso a paso.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Café • Guía</h4>
+        <p class="muted">Contenido realizado para asignatura Introducción a la Programación Web. © 2025</p>
+      </div>
+
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="quienes.html">Quiénes somos</a></li>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="faq-contacto.html">FAQ y Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Créditos</h4>
+        <p class="muted">Imágenes ilustrativas. Los derechos se los reservan los autores de las mismas. Icono en SVG.</p>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <nav class="socials" aria-label="Redes sociales">
+          <a class="social-btn" href="https://www.instagram.com/modobarista" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@modobaristaoficial" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.4 32.4 0 0 0 0 12a32.4 32.4 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.4 32.4 0 0 0 24 12a32.4 32.4 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
