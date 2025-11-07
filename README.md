@@ -4,21 +4,22 @@ Sitio estático educativo sobre café: granos, molienda, cafeteras/métodos, tie
 
 ## 🌲 Estructura del proyecto
 
-├─ index.html
-├─ quienes.html
-├─ granos-molienda.html
-├─ infusion.html
-├─ cafeteras-metodos.html
-├─ recetas.html
-├─ faq-contacto.html
-├─ CSS/
-│ └─ styles.css
-├─ JS/
-│ └─ script.js
-└─ assets/
-├─ icons/
-├─ images/
-└─ hero/
+.
+├── index.html
+├── quienes.html
+├── granos-molienda.html
+├── infusion.html
+├── cafeteras-metodos.html
+├── recetas.html
+├── faq-contacto.html
+├── CSS/
+│ └── styles.css
+├── JS/
+│ └── script.js
+└── assets/
+├── icons/
+├── images/
+└── hero/
 
 > Nota: Las rutas a CSS/JS en los HTML usan `CSS/styles.css` y `JS/script.js`.
 
