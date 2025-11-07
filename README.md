@@ -2,8 +2,8 @@
 
 Sitio estático educativo sobre café: granos, molienda, cafeteras/métodos, tiempos de infusión y recetas. Incluye calculadora de proporciones con historial, preguntas frecuentes y mapa embebido.
 
-## 🌲 Estructura del proyecto
-
+<h2>🌲 Estructura del proyecto</h2>
+<pre>
 .
 ├── index.html
 ├── quienes.html
@@ -13,13 +13,14 @@ Sitio estático educativo sobre café: granos, molienda, cafeteras/métodos, tie
 ├── recetas.html
 ├── faq-contacto.html
 ├── CSS/
-│ └── styles.css
+│   └── styles.css
 ├── JS/
-│ └── script.js
+│   └── script.js
 └── assets/
-├── icons/
-├── images/
-└── hero/
+    ├── icons/
+    ├── images/
+    └── hero/
+</pre>
 
 > Nota: Las rutas a CSS/JS en los HTML usan `CSS/styles.css` y `JS/script.js`.
 
